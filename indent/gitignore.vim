@@ -17,12 +17,12 @@ setlocal noautoindent
 if exists("*GetGitignoreIndent") | finish | endif
 
 function! s:is_li_start(line)
-    return a:line !~ '^ *\([*-]\)\%( *\1\)\{2}\%( \|\1\)*$' &&
-      \    a:line =~ '^\s*[*+-] \+'
+    return a:line !~ '\m^ *\([*-]\)\%( *\1\)\{2}\%( \|\1\)*$' &&
+      \    a:line =~ '\m^\s*[*+-] \+'
 endfunction
 
 function! s:is_blank_line(line)
-    return a:line =~ '^$'
+    return a:line =~ '\m^$'
 endfunction
 
 function! s:prevnonblank(lnum)
