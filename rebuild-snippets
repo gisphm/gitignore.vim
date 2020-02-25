@@ -58,9 +58,11 @@ generate_snippets() {
     local snippets_dir=$2
     local snippets_ext=$3
     local snippets_tab=$4
+
     for file in $source_dir/*.gitignore ; do
         local new_snippets_name="`basename "$file" .gitignore`"
         local new_snippets_file=$snippets_dir/$new_snippets_name.$snippets_ext
+
         if [[ $snippets_dir = $ultisnips_dir ]]; then
             echo "priority -50" > $new_snippets_file
             echo "" >> $new_snippets_file
@@ -68,13 +70,17 @@ generate_snippets() {
         else
             echo "snippet $new_snippets_name Gitignore Template" > $new_snippets_file
         fi
+
         if [[ $snippets_ext = "snip" ]]; then
             echo "abbr    $new_snippets_name" >> $new_snippets_file
         fi
+
         echo "$snippets_tab### $new_snippets_name ###" >> $new_snippets_file
+
         while read -r line ; do
-            echo -e "$snippets_tab$line" >> $new_snippets_file
+            echo "$snippets_tab$line" >> $new_snippets_file
         done < $file
+
         if [[ $snippets_dir = $ultisnips_dir ]]; then
             echo -e "$snippets_tab\$0" >> $new_snippets_file
             echo "endsnippet" >> $new_snippets_file
@@ -99,8 +105,8 @@ generate_snippets $repo_dir $neosnippets_dir "snip" "        "
 generate_snippets $repo_dir/Global $neosnippets_dir "snip" "        "
 echo "neosnippets-snippets is successfully created"
 generate_list $neosnippets_dir
-generate_snippets $repo_dir $snipmate_dir "snippets" "        "
-generate_snippets $repo_dir/Global $snipmate_dir "snippets" "        "
+generate_snippets $repo_dir $snipmate_dir "snippets" "$(printf '\t')"
+generate_snippets $repo_dir/Global $snipmate_dir "snippets" "$(printf '\t')"
 echo "snipmate-snippets is successfully created"
 generate_snippets $repo_dir $ultisnips_dir "snippets" ""
 generate_snippets $repo_dir/Global $ultisnips_dir "snippets" ""
