@@ -13,9 +13,11 @@ abbr    TeX
         *.fot
         *.cb
         *.cb2
+        .*.lb
         
         ## Intermediate documents:
         *.dvi
+        *.xdv
         *-converted-to.*
         # these rules might exclude image files for figures etc.
         # *.ps
@@ -41,6 +43,10 @@ abbr    TeX
         *.synctex.gz(busy)
         *.pdfsync
         
+        ## Build tool directories for auxiliary files
+        # latexrun
+        latex.out/
+        
         ## Auxiliary and intermediate files from other packages:
         # algorithms
         *.alg
@@ -60,6 +66,9 @@ abbr    TeX
         
         # changes
         *.soc
+        
+        # comment
+        *.cut
         
         # cprotect
         *.cpt
@@ -103,6 +112,11 @@ abbr    TeX
         *.glo
         *.gls
         *.glsdefs
+        *.lzo
+        *.lzs
+        
+        # uncomment this for glossaries-extra (will ignore makeindex's style files!)
+        # *.ist
         
         # gnuplottex
         *-gnuplottex-*
@@ -110,6 +124,14 @@ abbr    TeX
         # gregoriotex
         *.gaux
         *.gtex
+        
+        # htlatex
+        *.4ct
+        *.4tc
+        *.idv
+        *.lg
+        *.trc
+        *.xref
         
         # hyperref
         *.brf
@@ -123,11 +145,13 @@ abbr    TeX
         # listings
         *.lol
         
+        # luatexja-ruby
+        *.ltjruby
+        
         # makeidx
         *.idx
         *.ilg
         *.ind
-        *.ist
         
         # minitoc
         *.maf
@@ -146,7 +170,9 @@ abbr    TeX
         *.mw
         
         # nomencl
+        *.nlg
         *.nlo
+        *.nls
         
         # pax
         *.pax
@@ -175,6 +201,9 @@ abbr    TeX
         *.pytxcode
         pythontex-files-*/
         
+        # tcolorbox
+        *.listing
+        
         # thmtools
         *.loe
         
@@ -186,14 +215,25 @@ abbr    TeX
         # todonotes
         *.tdo
         
+        # vhistory
+        *.hst
+        *.ver
+        
         # easy-todo
         *.lod
+        
+        # xcolor
+        *.xcp
+        
+        # xmpincl
+        *.xmpi
         
         # xindy
         *.xdy
         
-        # xypic precompiled matrices
+        # xypic precompiled matrices and outlines
         *.xyc
+        *.xyd
         
         # endfloat
         *.ttt
@@ -210,15 +250,36 @@ abbr    TeX
         # Texpad
         .texpadtmp
         
+        # LyX
+        *.lyx~
+        
         # Kile
         *.backup
+        
+        # gummi
+        .*.swp
         
         # KBibTeX
         *~[0-9]*
         
+        # TeXnicCenter
+        *.tps
+        
         # auto folder when using emacs and auctex
-        /auto/*
+        ./auto/*
+        *.el
         
         # expex forward references with \gathertags
         *-tags.tex
+        
+        # standalone packages
+        *.sta
+        
+        # Makeindex log files
+        *.lpz
+        
+        # REVTeX puts footnotes in the bibliography by default, unless the nofootinbib
+        # option is specified. Footnotes are the stored in a file with suffix Notes.bib.
+        # Uncomment the next line to have this generated file ignored.
+        #*Notes.bib
         ${0}

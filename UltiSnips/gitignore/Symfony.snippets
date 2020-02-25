@@ -19,6 +19,10 @@ snippet Symfony "Symfony Gitignore Template"
 !var/logs/.gitkeep
 !var/sessions/.gitkeep
 
+# Logs (Symfony4)
+/var/log/*
+!var/log/.gitkeep
+
 # Parameters
 /app/config/parameters.yml
 /app/config/parameters.ini
@@ -29,6 +33,7 @@ snippet Symfony "Symfony Gitignore Template"
 /bin/*
 !bin/console
 !bin/symfony_requirements
+/vendor/
 
 # Assets and user uploads
 /web/bundles/
@@ -40,6 +45,9 @@ snippet Symfony "Symfony Gitignore Template"
 
 # Build data
 /build/
+
+# Composer PHAR
+/composer.phar
 
 # Backup entities generated with doctrine:generate:entities command
 **/Entity/*~

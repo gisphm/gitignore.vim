@@ -16,6 +16,9 @@ abbr    Ruby
         # Used by dotenv library to load environment variables.
         # .env
         
+        # Ignore Byebug command history file.
+        .byebug_history
+        
         ## Specific to RubyMotion:
         .dat*
         .repl_history
@@ -51,4 +54,7 @@ abbr    Ruby
         
         # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
         .rvmrc
+        
+        # Used by RuboCop. Remote config files pulled in from inherit_from directive.
+        # .rubocop-https?--*
         ${0}

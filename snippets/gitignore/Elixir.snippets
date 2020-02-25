@@ -1,9 +1,13 @@
 snippet Elixir Gitignore Template
-        ### Elixir ###
-        /_build
-        /cover
-        /deps
-        erl_crash.dump
-        *.ez
-        *.beam
-        ${0}
+	### Elixir ###
+	/_build
+	/cover
+	/deps
+	/doc
+	/.fetch
+	erl_crash.dump
+	*.ez
+	*.beam
+	/config/*.secret.exs
+	.elixir_ls/
+	${0}

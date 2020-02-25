@@ -8,6 +8,9 @@ abbr    R
         # Session Data files
         .RData
         
+        # User-specific files
+        .Ruserdata
+        
         # Example code in package build process
         *-Ex.R
         
@@ -28,10 +31,13 @@ abbr    R
         .httr-oauth
         
         # knitr and R markdown default cache directories
-        /*_cache/
+        *_cache/
         /cache/
         
         # Temporary files created by R markdown
         *.utf8.md
         *.knit.md
+        
+        # R Environment Variables
+        .Renviron
         ${0}

@@ -1,7 +1,6 @@
 snippet Eclipse Gitignore Template
 abbr    Eclipse
         ### Eclipse ###
-        
         .metadata
         bin/
         tmp/
@@ -26,6 +25,9 @@ abbr    Eclipse
         # CDT-specific (C/C++ Development Tooling)
         .cproject
         
+        # CDT- autotools
+        .autotools
+        
         # Java annotation processor (APT)
         .factorypath
         
@@ -47,8 +49,16 @@ abbr    Eclipse
         # Code Recommenders
         .recommenders/
         
+        # Annotation Processing
+        .apt_generated/
+        .apt_generated_test/
+        
         # Scala IDE specific (Scala & Java development for Eclipse)
         .cache-main
         .scala_dependencies
         .worksheet
+        
+        # Uncomment this line if you wish to ignore the project description file.
+        # Typically, this file would be tracked if it contains build/dependency configurations:
+        #.project
         ${0}
