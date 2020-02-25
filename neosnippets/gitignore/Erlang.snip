@@ -2,20 +2,13 @@ snippet Erlang Gitignore Template
 abbr    Erlang
         ### Erlang ###
         .eunit
+        deps
         *.o
         *.beam
         *.plt
         erl_crash.dump
-        .concrete/DEV_MODE
-        
-        # rebar 2.x
-        .rebar
-        rel/example_project
         ebin/*.beam
-        deps
-        
-        # rebar 3
-        .rebar3
-        _build/
-        _checkouts/
+        rel/example_project
+        .concrete/DEV_MODE
+        .rebar
         ${0}

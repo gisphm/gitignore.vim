@@ -7,7 +7,6 @@ abbr    VisualStudio
         ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
         
         # User-specific files
-        *.rsuser
         *.suo
         *.user
         *.userosscache
@@ -16,9 +15,6 @@ abbr    VisualStudio
         # User-specific files (MonoDevelop/Xamarin Studio)
         *.userprefs
         
-        # Mono auto generated files
-        mono_crash.*
-        
         # Build results
         [Dd]ebug/
         [Dd]ebugPublic/
@@ -26,30 +22,23 @@ abbr    VisualStudio
         [Rr]eleases/
         x64/
         x86/
-        [Aa][Rr][Mm]/
-        [Aa][Rr][Mm]64/
         bld/
         [Bb]in/
         [Oo]bj/
         [Ll]og/
-        [Ll]ogs/
         
-        # Visual Studio 2015/2017 cache/options directory
+        # Visual Studio 2015 cache/options directory
         .vs/
         # Uncomment if you have tasks that create the project's static files in wwwroot
         #wwwroot/
-        
-        # Visual Studio 2017 auto generated files
-        Generated\ Files/
         
         # MSTest test Results
         [Tt]est[Rr]esult*/
         [Bb]uild[Ll]og.*
         
-        # NUnit
+        # NUNIT
         *.VisualState.xml
         TestResult.xml
-        nunit-*.xml
         
         # Build Results of an ATL Project
         [Dd]ebugPS/
@@ -63,21 +52,16 @@ abbr    VisualStudio
         project.lock.json
         project.fragment.lock.json
         artifacts/
+        **/Properties/launchSettings.json
         
-        # StyleCop
-        StyleCopReport.xml
-        
-        # Files built by Visual Studio
         *_i.c
         *_p.c
-        *_h.h
+        *_i.h
         *.ilk
         *.meta
         *.obj
-        *.iobj
         *.pch
         *.pdb
-        *.ipdb
         *.pgc
         *.pgd
         *.rsp
@@ -87,7 +71,6 @@ abbr    VisualStudio
         *.tlh
         *.tmp
         *.tmp_proj
-        *_wpftmp.csproj
         *.log
         *.vspscc
         *.vssscc
@@ -116,9 +99,6 @@ abbr    VisualStudio
         *.vspx
         *.sap
         
-        # Visual Studio Trace Files
-        *.e2e
-        
         # TFS 2012 Local Workspace
         $tf/
         
@@ -130,18 +110,14 @@ abbr    VisualStudio
         *.[Rr]e[Ss]harper
         *.DotSettings.user
         
+        # JustCode is a .NET coding add-in
+        .JustCode
+        
         # TeamCity is a build add-in
         _TeamCity*
         
         # DotCover is a Code Coverage Tool
         *.dotCover
-        
-        # AxoCover is a Code Coverage Tool
-        .axoCover/*
-        !.axoCover/settings.json
-        
-        # Coverlet is a free, cross platform Code Coverage Tool
-        coverage*[.json, .xml, .info]
         
         # Visual Studio code coverage results
         *.coverage
@@ -190,14 +166,12 @@ abbr    VisualStudio
         
         # NuGet Packages
         *.nupkg
-        # NuGet Symbol Packages
-        *.snupkg
         # The packages folder can be ignored because of Package Restore
-        **/[Pp]ackages/*
+        **/packages/*
         # except build/, which is used as an MSBuild target.
-        !**/[Pp]ackages/build/
+        !**/packages/build/
         # Uncomment if necessary however generally it will be regenerated when needed
-        #!**/[Pp]ackages/repositories.config
+        #!**/packages/repositories.config
         # NuGet v3's project.json files produces more ignorable files
         *.nuget.props
         *.nuget.targets
@@ -216,14 +190,12 @@ abbr    VisualStudio
         Package.StoreAssociation.xml
         _pkginfo.txt
         *.appx
-        *.appxbundle
-        *.appxupload
         
         # Visual Studio cache files
         # files ending in .cache can be ignored
         *.[Cc]ache
         # but keep track of directories ending in .cache
-        !?*.[Cc]ache/
+        !*.[Cc]ache/
         
         # Others
         ClientBin/
@@ -235,10 +207,6 @@ abbr    VisualStudio
         *.pfx
         *.publishsettings
         orleans.codegen.cs
-        
-        # Including strong name files can present a security risk
-        # (https://github.com/github/gitignore/pull/2483#issue-259490424)
-        #*.snk
         
         # Since there are multiple workflows, uncomment next line to ignore bower_components
         # (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
@@ -254,8 +222,6 @@ abbr    VisualStudio
         Backup*/
         UpgradeLog*.XML
         UpgradeLog*.htm
-        ServiceFabricBackup/
-        *.rptproj.bak
         
         # SQL Server files
         *.mdf
@@ -266,10 +232,6 @@ abbr    VisualStudio
         *.rdl.data
         *.bim.layout
         *.bim_*.settings
-        *.rptproj.rsuser
-        *- [Bb]ackup.rdl
-        *- [Bb]ackup ([0-9]).rdl
-        *- [Bb]ackup ([0-9][0-9]).rdl
         
         # Microsoft Fakes
         FakesAssemblies/
@@ -280,6 +242,9 @@ abbr    VisualStudio
         # Node.js Tools for Visual Studio
         .ntvs_analysis.dat
         node_modules/
+        
+        # Typescript v1 declaration files
+        typings/
         
         # Visual Studio 6 build log
         *.plg
@@ -305,8 +270,12 @@ abbr    VisualStudio
         # FAKE - F# Make
         .fake/
         
-        # CodeRush personal settings
-        .cr/personal
+        # JetBrains Rider
+        .idea/
+        *.sln.iml
+        
+        # CodeRush
+        .cr/
         
         # Python Tools for Visual Studio (PTVS)
         __pycache__/
@@ -327,31 +296,4 @@ abbr    VisualStudio
         *.btm.cs
         *.odx.cs
         *.xsd.cs
-        
-        # OpenCover UI analysis results
-        OpenCover/
-        
-        # Azure Stream Analytics local run output
-        ASALocalRun/
-        
-        # MSBuild Binary and Structured Log
-        *.binlog
-        
-        # NVidia Nsight GPU debugger configuration file
-        *.nvuser
-        
-        # MFractors (Xamarin productivity tool) working folder
-        .mfractor/
-        
-        # Local History for Visual Studio
-        .localhistory/
-        
-        # BeatPulse healthcheck temp database
-        healthchecksdb
-        
-        # Backup folder for Package Reference Convert tool in Visual Studio 2017
-        MigrationBackup/
-        
-        # Ionide (cross platform F# VS Code tools) working folder
-        .ionide/
         ${0}
