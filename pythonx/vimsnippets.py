@@ -1,6 +1,17 @@
-"""Helper methods used in UltiSnips snippets."""
+"""
+  vimsnippets.py
+  ==============
 
-import string, vim
+  Description:           Helper methods used in UltiSnips snippets.
+  Author:                gisphm <phmfk@hotmail.com>
+  Creation Date:         2015-11-10
+
+"""
+
+import string
+
+import vim
+
 
 def complete(tab, opts):
     """
