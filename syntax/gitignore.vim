@@ -14,11 +14,13 @@ syn match gitignoreComment "^#.*" contains=gitignoreTodo
 syn match gitignoreComment "\s#.*"ms=s+1 contains=gitignoreTodo
 syn match gitignoreFile "^\(#\)\@!.*\(/\)\@<!$"
 syn match gitignoreDirectory "^\(#\)\@!.*\/$"
+syn match gitignoreExclusion "^!.*"
 
 " Define the default highlighting.
 " Only used when an item doesn't have highlighting yet
 hi def link gitignoreComment Comment
 hi def link gitignoreTodo Todo
+hi def link gitignoreExclusion Conditional
 hi def link gitignoreDirectory Constant
 hi def link gitignoreFile Type
 
